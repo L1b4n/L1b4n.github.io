@@ -1,0 +1,68 @@
+body { 
+    font-family: 'Alfa Slab One', cursive; 
+    background-image: url('img.jpg'); /* Make sure the image path is correct */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    animation: fadeInBackground 2s ease-out forwards;
+}
+.container { 
+    width: 80%; 
+    margin: 20px auto; 
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: slideIn 1s ease-out forwards;
+}
+.header { 
+    color: #333366; 
+    font-size: 2.5em; 
+    text-align: center; 
+    text-shadow: 2px 2px 4px #000000;
+    animation: popIn 1s ease-out forwards;
+}
+.section { 
+    margin-top: 20px; 
+    text-shadow: 1px 1px 2px #000000;
+    animation: fadeIn 2s ease-out forwards;
+}
+.skills {
+    color: #006400;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 2px #000000;
+    animation: fadeIn 3s ease-out forwards;
+}
+ul {
+    list-style-type: none;
+}
+ul li::before {
+    content: '→ ';
+    color: #333366;
+    font-weight: bold;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes fadeInBackground {
+    0% { background-color: rgba(0,0,0,0); }
+    100% { background-color: rgba(0,0,0,0.7); }
+}
+@keyframes popIn {
+    0% { transform: scale(0); }
+    60% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
